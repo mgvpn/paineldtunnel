@@ -12,7 +12,7 @@ class ApkDownloadModal {
                         <div class="card-body p-2">
                             <h5 class="card-title d-flex justify-content-center">TUTORIAL</h5>
                             <p class="card-text">Mire este video para aprender cómo ingresar sus credenciales en la aplicación.</p>
-                            <a href="https://www.youtube.com" class="btn btn-dark w-100 mt-2">Alterar las credenciales</a>
+                            <a href="https://youtu.be/BXspkdAhp4g" class="btn btn-dark w-100 mt-2">Alterar las credenciales</a>
                         </div>
                     </div>
                     <div class="card">
