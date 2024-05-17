@@ -1,0 +1,18 @@
+#!/bin/bash
+
+screen -r -S painel -X quit
+cd /root/paineldtunnel
+[[ -e /root/paineldtunnel/prime ]] && {
+  screen -dmS "painel" sh start.sh
+  echo
+  echo "Painel Dtunnel Mod Online (WAPI)"
+  echo
+  exit 0
+}
+touch prime
+#echo "ps x | grep 'wapi' | grep -v 'grep' || cd /root/apiWa && sudo screen -dmS 'wapi' sh start.sh && cd /root" >> /etc/autostart
+(crontab -l > /tmp/apiWaRes; echo "@reboot sleep 10 && pon" >> /tmp/apiWaRes; cat /tmp/apiWaRes) | crontab -
+screen -dmS "painel" sh start.sh
+echo
+echo "Painel Dtunnel Mod Online (PRIME)"
+echo

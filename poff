@@ -1,0 +1,6 @@
+#!/bin/bash
+
+screen -r -S painel -X quit
+echo
+echo "Painel Dtunnel Mod Desligado(OFFLINE)"
+echo
