@@ -9,7 +9,7 @@ const headerSchema = z.object({
   password: z.string().optional(),
   'dtunnel-token': z.string(),
   'dtunnel-update': z.enum(['app_config', 'app_layout', 'app_text']),
-  'user-agent': z.literal('DTunnelMod (@DTunnelMod, @DTunnelModGroup, @Net_Satoshi)'),
+  'user-agent': z.literal('DTunnelMod (@DTunnelMod, @DTunnelModGroup, @LightXVD)'),
 });
 
 const handler = {
