@@ -84,9 +84,19 @@
                     <button type="submit" class="btn btn-dark w-100 __btn__save">Guardar</button>
                   </div>
                 </div>
-                <div class="col-md-6 mb-3">
+                <!-- En la parte del formulario donde está el campo ZIP (dentro del col-md-6) -->
+<div class="mb-3">
+  <label for="zip_password" class="form-label">Contraseña ZIP</label>
+  <div class="input-group">
+    <i class="input-group-text bi bi-file-zip-fill"></i>
+    <input type="password" class="form-control" id="zip_password" name="zip_password" value="Webcontvip"> <!-- Valor por defecto añadido -->
+    <button class="input-group-text border border-1" type="button" onclick="showZipPassword()">
+      <i class="bi bi-eye-fill"></i>
+    </button>
+  </div>
+</div>
                   <label for="email" class="form-label">Credenciales</label>
-                  <textarea class="form-control mb-3" id="credentials" style="height: 180px;" name="credentials" readonly></textarea>
+                  <textarea class="form-control mb-3" id="credentials" style="height: 140px;" name="credentials" readonly></textarea>
                   <div class="d-flex justify-content-center ">
                     <button type="submit" class="btn btn-dark w-100 __btn__copy">Copiar</button>
                   </div>
@@ -133,6 +143,7 @@
       const email = document.getElementById('email').value
       const password = document.getElementById('password').value || null
       const confirm_password = document.getElementById('confirm_password').value || null
+      const zip_password = document.getElementById('zip_password').value || null
 
       if (password !== confirm_password) {
         showToastError('Las contraseñas no coinciden!')
@@ -144,10 +155,7 @@
         return
       }
 
-      // showToastInfo('Guardando perfil...')
-
       try {
-
         const response = await fetch('/profile', {
           method: 'PUT',
           headers: {
@@ -158,7 +166,8 @@
             email,
             username,
             password,
-            confirm_password
+            confirm_password,
+            zip_password
           })
         });
 
@@ -192,6 +201,15 @@
       } else {
         password.type = 'password'
         confirm_password.type = 'password'
+      }
+    }
+    
+    function showZipPassword() {
+      const zip_password = document.getElementById('zip_password')
+      if (zip_password.type === 'password') {
+        zip_password.type = 'text'
+      } else {
+        zip_password.type = 'password'
       }
     }
   </script>
