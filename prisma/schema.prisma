@@ -14,6 +14,8 @@ model User {
   email      String   @unique
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
+  role       String   @default("user")   // "user" o "admin"
+  expiresAt  DateTime?                   // Fecha de expiración opcional
 
   AppText   AppText[]
   Category  Category[]
