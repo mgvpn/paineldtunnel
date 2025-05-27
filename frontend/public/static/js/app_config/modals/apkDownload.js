@@ -19,7 +19,7 @@ class ApkDownloadModal {
                         <div class="card-body p-2">
                             <h5 class="card-title d-flex justify-content-center">SPEED-X</h5>
                             <p class="card-text">Esta versión contiene modos de MULTI CONEXIONES SSH, SSL, OpenVPN y V2RAY (ANDROID 14 ✅)</p>
-                            <a href="https://github.com/Satoshi-v/V2ray-14/raw/main/SPEED-X.apk" class="btn btn-dark w-100 mt-2">DESCARGAR</a>
+                            <a href="https://github.com/carlos-ayala/SUPER-VPN/raw/main/SUPER-VPN.apk" class="btn btn-dark w-100 mt-2">DESCARGAR</a>
                         </div>
                     </div>
                 </div>
