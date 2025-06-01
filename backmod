@@ -1,37 +1,37 @@
 #!/bin/bash
 
-# Gerar string aleatória para uso no nome do arquivo de backup
+# Generar cadena aleatoria para uso en el nombre del archivo de respaldo
 random=$(cat /dev/urandom | tr -dc '[:alnum:]' | head -c 5)
 
-# Obter data e hora atual para uso no nome do arquivo de backup
+# Obtener fecha y hora actual para uso en el nombre del archivo de respaldo
 dato=$(date "+%d-%m-%Y_%Hh-%Mm-%Ss")
 
-# Caminho absoluto para o diretório de backup
+# Ruta absoluta para el directorio de respaldo
 backup_dir="/root/backupAuto"
 
-# Criar diretório de backup se não existir
-mkdir -p "$backup_dir" && echo "Diretório de backup criado com sucesso"
+# Crear directorio de respaldo si no existe
+mkdir -p "$backup_dir" && echo "Directorio de respaldo creado con éxito"
 
-# Adicionar tarefa cron se ainda não estiver configurada
+# Agregar tarea cron si aún no está configurada
 if ! crontab -l | grep -q "0 */5 * * * backmod"; then
-    (crontab -l 2>/dev/null; echo "0 */5 * * * backmod") | crontab - && echo "Tarefa cron adicionada com sucesso"
+    (crontab -l 2>/dev/null; echo "0 */5 * * * backmod") | crontab - && echo "Tarea cron agregada con éxito"
 fi
 
-# Copiar arquivos para o diretório de backup
+# Copiar archivos al directorio de respaldo
 if cp /root/paineldtunnel/prisma/database.db /root/paineldtunnel/.env /root/paineldtunnel/painelbackup; then
-    echo "Arquivos copiados com sucesso"
+    echo "Archivos copiados con éxito"
 else
-    echo "Erro ao copiar arquivos"
+    echo "Error al copiar archivos"
     exit 1
 fi
 
-# Compactar o diretório de backup
+# Comprimir el directorio de respaldo
 if zip -r "/root/backupAuto/painelbackup-$dato-$random.zip" /root/paineldtunnel/painelbackup; then
-    echo "Backup compactado com sucesso"
+    echo "Respaldo comprimido con éxito"
 else
-    echo "Erro ao compactar backup"
+    echo "Error al comprimir el respaldo"
     exit 1
 fi
 
-# Remover o diretório de backup temporário
-rm -rf /root/paineldtunnel/painelbackup && echo "Diretório temporário removido com sucesso"
+# Eliminar el directorio de respaldo temporal
+rm -rf /root/paineldtunnel/painelbackup && echo "Directorio temporal eliminado con éxito"
