@@ -1,96 +1,101 @@
 #!/bin/bash
 clear
 IP=$(wget -qO- ipv4.icanhazip.com)
-
-# Verifica si es root
 [[ "$(whoami)" != "root" ]] && {
-  echo -e "\n\033[1;31m¡NECESITAS EJECUTAR LA INSTALACIÓN COMO ROOT!\033[0m\n"
-  rm -f install.sh
-  exit 1
+echo
+echo "¡NECESITAS EJECUTAR LA INSTALACIÓN COMO ROOT!"
+echo
+rm install.sh
+exit 0
 }
 
-# Verifica versión de Ubuntu
 ubuntuV=$(lsb_release -r | awk '{print $2}' | cut -d. -f1)
-[[ $(($ubuntuV < 20)) = 1 ]] && {
-  clear
-  echo -e "\033[1;31m¡POR FAVOR, INSTALA EN UBUNTU 20.04 O 22.04! EL TUYO ES $ubuntuV\033[0m"
-  rm -f /root/install.sh
-  exit 1
-}
 
-# Si ya existe, pregunta si desea eliminar
+[[ $(($ubuntuV < 20)) = 1 ]] && {
+clear
+echo "¡POR FAVOR, INSTALA EN UBUNTU 20.04 O 22.04! EL TUYO ES $ubuntuV"
+echo
+rm /root/install.sh
+exit 0
+}
 [[ -e /root/paineldtunnel/src/index.ts ]] && {
   clear
-  echo -e "\033[1;33mEL PANEL YA ESTÁ INSTALADO.\033[0m"
-  echo "¿DESEAS ELIMINARLO Y REINSTALARLO? (s/n)"
-  read -r remo
-  [[ $remo =~ ^[sS]$ ]] && {
-    cd /root/paineldtunnel || exit
-    rm -rf painelbackup > /dev/null
-    mkdir painelbackup
-    cp prisma/database.db .env painelbackup/
-    zip -r painelbackup.zip painelbackup > /dev/null
-    mv painelbackup.zip /root/
-    cd /root || exit
-    rm -rf /root/paineldtunnel
-    rm -f install.sh
-    echo -e "\n\033[1;32m¡Panel eliminado y respaldo creado en /root/painelbackup.zip!\033[0m"
-    exit 0
+  echo "EL PANEL YA ESTÁ INSTALADO. ¿DESEAS ELIMINARLO? (s/n)"
+  read remo
+  [[ $remo = @(s|S) ]] && {
+  cd /root/paineldtunnel
+  rm -r painelbackup > /dev/null
+  mkdir painelbackup > /dev/null
+  cp prisma/database.db painelbackup
+  cp .env painelbackup
+  zip -r painelbackup.zip painelbackup
+  mv painelbackup.zip /root
+  rm -r /root/paineldtunnel
+  rm /root/install.sh
+  echo "¡Eliminado con éxito!"
+  exit 0
   }
   exit 0
 }
-
-# Pregunta el puerto
 clear
-echo "¿QUÉ PUERTO DESEAS ACTIVAR PARA EL PANEL WEB?"
-read -r porta
+echo "¿QUÉ PUERTO DESEAS ACTIVAR?"
+read porta
 echo
-echo -e "\033[1;34mInstalando Panel Dtunnel Mod...\033[0m"
-sleep 2
-
+echo "Instalando Panel Dtunnel Mod..."
+echo
+sleep 3
 #========================
-apt-get update -y
-apt-get install wget curl zip npm cron unzip screen git -y
-npm install -g pm2
-curl -sL https://raw.githubusercontent.com/carlos-ayala/paineldtunnel/main/setup_20.x | bash
-apt-get install nodejs -y
-#========================
-
-# Clona el repositorio y configura permisos
+sudo apt-get update -y
+sudo apt-get update -y
+sudo apt-get install wget -y
+sudo apt-get install curl -y
+sudo apt-get install zip -y
+sudo apt-get install npm -y /dev/null
+npm install pm2 -g /dev/null
+sudo apt-get install cron -y
+sudo apt-get install unzip -y
+sudo apt-get install screen -y
+sudo apt-get install git -y
+curl -s -L https://raw.githubusercontent.com/carlos-ayala/paineldtunnel/main/setup_20.x | bash
+sudo apt-get install nodejs -y
+#=========================
 git clone https://github.com/carlos-ayala/paineldtunnel.git
-cd /root/paineldtunnel || exit
-chmod +x pon poff menudt backmod
-mv pon poff menudt backmod /bin/
-
-# Crea archivo .env
+cd /root/paineldtunnel 
+chmod 777 pon poff menudt backmod
+mv pon poff menudt backmod /bin
 echo "PORT=$porta" > .env
-echo "NODE_ENV=\"production\"" >> .env
+echo "NODE_ENV=\"producción\"" >> .env
 echo "DATABASE_URL=\"file:./database.db\"" >> .env
-echo "CSRF_SECRET=\"$(node -e "console.log(require('crypto').randomBytes(100).toString('base64'))")\"" >> .env
-echo "JWT_SECRET_KEY=\"$(node -e "console.log(require('crypto').randomBytes(100).toString('base64'))")\"" >> .env
-echo "JWT_SECRET_REFRESH=\"$(node -e "console.log(require('crypto').randomBytes(100).toString('base64'))")\"" >> .env
+token1=$(node -e "console.log(require('crypto').randomBytes(100).toString('base64'));")
+token2=$(node -e "console.log(require('crypto').randomBytes(100).toString('base64'));")
+token3=$(node -e "console.log(require('crypto').randomBytes(100).toString('base64'));")
+echo "CSRF_SECRET=\"$token1\"" >> .env
+echo "JWT_SECRET_KEY=\"$token2\"" >> .env
+echo "JWT_SECRET_REFRESH=\"$token3\"" >> .env
 echo "ENCRYPT_FILES=\"7223fd56-e21d-4191-8867-f3c67601122a\"" >> .env
-
-# Instala dependencias y prepara el panel
 npm install
 npx prisma generate
 npx prisma migrate deploy
 npm run start
-
-# Mensaje final
+#=========================
 clear
-echo -e "\n\033[1;32m¡PANEL DTUNNEL MOD INSTALADO CON ÉXITO!\033[0m"
-echo "Los archivos se encuentran en: \033[1;37m/root/paineldtunnel\033[0m"
-echo -e "\nComando para \033[1;32mACTIVAR:\033[0m pon"
-echo "Comando para \033[1;31mDESACTIVAR:\033[0m poff"
-echo -e "\nUsa el comando \033[1;36mmenudt\033[0m para gestionar usuarios desde consola"
 echo
-rm -f /root/install.sh
+echo
+echo "¡PANEL DTUNNEL MOD INSTALADO CON ÉXITO!"
+echo "Los Archivos Quedan En La Carpeta /root/paineldtunnel"
+echo
+echo "Comando para ACTIVAR: pon"
+echo "Comando para DESACTIVAR: poff"
+echo
+echo -e "\033[1;36mEscribe el comando: \033[1;37mmenudt \033[1;32m(Para acceder al Menú del Panel) \033[0m"
+echo
+rm /root/install.sh
 pon
-echo -e "\n\033[1;36mACCEDE A TU PANEL:\033[1;37m http://$IP:$porta\033[0m\n"
-echo -ne "\033[1;33mPulsa ENTER para finalizar...\033[0m"
-read
-history -c
-rm -rf wget-log* install*
-sleep 2
+echo -e "\033[1;36mTU PANEL:\033[1;37m http://$IP\033[0m"
+echo
+echo -ne "\n\033[1;31mPULSA ENTER \033[1;33mPara Regresar \033[1;32mAl Prompt! \033[0m"; read
+cat /dev/null > ~/.bash_history && history -c
+rm -rf wget-log* > /dev/null 2>&1
+rm install* > /dev/null 2>&1
+sleep 3
 menudt
