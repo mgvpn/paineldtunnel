@@ -25,7 +25,7 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_CHOOSE_CONFIG',
-    text: 'ESCOLHA UMA CONFIGURAÇÃO',
+    text: 'ELIJA UNA CONFIGURACION',
   },
   {
     label: 'LBL_UUID',
@@ -33,11 +33,11 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_USERNAME',
-    text: 'Nome de usuário',
+    text: 'Nombre de usuario',
   },
   {
     label: 'LBL_PASSWORD',
-    text: 'Senha',
+    text: 'Contraseña',
   },
   {
     label: 'LBL_UUID_INVALID',
@@ -45,51 +45,51 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_USERNAME_INVALID',
-    text: 'Nome de usuário inválido',
+    text: 'Nombre de usuario invalido',
   },
   {
     label: 'LBL_PASSWORD_INVALID',
-    text: 'Senha inválida',
+    text: 'Contraseña invalida',
   },
   {
     label: 'LBL_USERNAME_PASSWORD_INVALID',
-    text: 'Por favor, preencha o usuário e senha',
+    text: 'Por favor complete el nombre de usuario y contraseña',
   },
   {
     label: 'LBL_CONFIG_TITLE',
-    text: 'Configuração',
+    text: 'Configuracion',
   },
   {
     label: 'LBL_INITIALIZING_APP',
-    text: 'Inicializando aplicação',
+    text: 'Inicializando aplicación',
   },
   {
     label: 'LBL_CONFIG_LOADED',
-    text: 'Configuração carregada',
+    text: 'Configuración cargada',
   },
   {
     label: 'LBL_SEARCHING_FOR_UPDATES',
-    text: 'Procurando atualizações',
+    text: 'Buscando actualizaciones',
   },
   {
     label: 'LBL_CONFIG_UPDATED',
-    text: 'Configurações atualizadas com sucesso',
+    text: 'Configuración actualizada exitosamente',
   },
   {
     label: 'LBL_CONFIG_NOT_SUPPORTED',
-    text: 'Parece que essa configuração não é suportada neste aplicativo',
+    text: 'Parece que esta configuración no es compatible con esta aplicación',
   },
   {
     label: 'LBL_ERROR_ESTABLISHING_CONNECTION_SSH',
-    text: '<b>Erro ao estabelecer conexão SSH</b>',
+    text: '<b>Error al establecer la conexión SSH</b>',
   },
   {
     label: 'LBL_RECONNECTION_PROCESS',
-    text: 'Processo de reconexão',
+    text: 'Proceso de reconexión',
   },
   {
     label: 'LBL_RECONNECTING_IN',
-    text: 'Reconectando em: %ss',
+    text: 'Reconectando en: %ss',
   },
   {
     label: 'LBL_RECONNECTING',
@@ -117,35 +117,35 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_ROUTES_INFO_INCL',
-    text: 'Rotas: %s',
+    text: 'Rutas: %s',
   },
   {
     label: 'LBL_ROUTES_INFO_EXCL',
-    text: 'Rotas excluídas: %s',
+    text: 'Rutas excluídas: %s',
   },
   {
     label: 'LBL_INVALID_CONFIG_OVPN',
-    text: 'Configuração OVPN inválida',
+    text: 'Configuración de OVPN no válida',
   },
   {
     label: 'LBL_ERROR',
-    text: 'Erro: %s',
+    text: 'Error: %s',
   },
   {
     label: 'LBL_CONFIG_NOT_FOUND_TITLE',
-    text: 'Configuração não encontrada',
+    text: 'Configuración no encontrada',
   },
   {
     label: 'LBL_CONFIG_NOT_FOUND_TEXT',
-    text: 'Nenhuma configuração encontrada',
+    text: 'No se encontraron configuraciones',
   },
   {
     label: 'LBL_STOP_APPLICATION',
-    text: 'Para continuar, para a aplicação',
+    text: 'Para continuar, a la aplicación',
   },
   {
     label: 'LBL_FINGERPRINT',
-    text: '<b>Impressão digital: %s</b>',
+    text: '<b>Impresion digital: %s</b>',
   },
   {
     label: 'LBL_AUTHENTICATING',
@@ -153,15 +153,15 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_AUTHENTICATION_SUCCESS',
-    text: '<b>Autenticação realizada com sucesso</>',
+    text: '<b>Autenticación completada exitosamente</>',
   },
   {
     label: 'LBL_AUTHENTICATION_FAILED',
-    text: 'Falha na autenticação',
+    text: 'Error de autenticación',
   },
   {
     label: 'LBL_AUTHENTICATION_FAILED_TEXT',
-    text: 'Não foi possível autenticar com servidor. Por favor, verifique seu nome de usuário e senha.',
+    text: 'No se puede autenticar con el servidor. Por favor verifique su nombre de usuario y contraseña.',
   },
   {
     label: 'LBL_STATE_CONNECTED',
@@ -181,7 +181,7 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_STATE_NO_NETWORK',
-    text: 'Sem acesso à internet',
+    text: 'Sin acceso a Internet',
   },
   {
     label: 'LBL_STATE_AUTH',
@@ -189,19 +189,19 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_STATE_AUTH_FAILED',
-    text: 'Falha na autenticação',
+    text: 'Error de autenticación',
   },
   {
     label: 'LBL_STATE_UNKNOWN',
-    text: 'Desconhecido',
+    text: 'Desconocido',
   },
   {
     label: 'LBL_STATE_ASSIGN_IP',
-    text: 'Atribuindo IP',
+    text: 'Asignar IP',
   },
   {
     label: 'LBL_STATE_ADD_ROUTES',
-    text: 'Adicionando rotas',
+    text: 'Adicionando rutas',
   },
   {
     label: 'LBL_STATE_RECONNECTING',
@@ -209,11 +209,11 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_STATE_EXITING',
-    text: 'Saindo',
+    text: 'Saliendo',
   },
   {
     label: 'LBL_STATE_RESOLVE',
-    text: 'Resolvendo',
+    text: 'Resolviendo',
   },
   {
     label: 'LBL_STATE_TCP_CONNECT',
@@ -221,7 +221,7 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_STATE_VPN_GENERATE_CONFIG',
-    text: 'Gerando configuração',
+    text: 'Generando configuración',
   },
   {
     label: 'LBL_STATE_WAIT',
@@ -229,11 +229,11 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_STATE_GET_CONFIG',
-    text: 'Obtendo configuração',
+    text: 'Obteniendo configuración',
   },
   {
     label: 'LBL_VPN_ESTABLISHED',
-    text: '<b>VPN estabelecido</b>',
+    text: '<b>VPN establecida</b>',
   },
   {
     label: 'LBL_APP_VERSION',
@@ -245,27 +245,27 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_ROUTE_REJECTED',
-    text: 'Rota rejeitada:',
+    text: 'Ruta rechazada:',
   },
   {
     label: 'LBL_COULD_NOT_ADD_DNS',
-    text: 'Não foi possível adicionar DNS:',
+    text: 'No se puede agregar DNS:',
   },
   {
     label: 'LBL_ERROR_INTERFACE_TUN',
-    text: 'Erro ao criar interface tun',
+    text: 'Error al crear la interfaz tun',
   },
   {
     label: 'LBL_OPENING_INTERFACE_TUN',
-    text: 'Abrindo interface tun',
+    text: 'Apertura de la interfaz tun',
   },
   {
     label: 'LBL_CHECKING_USER',
-    text: 'Verificando usuário...',
+    text: 'Verificando usuario...',
   },
   {
     label: 'LBL_CHECKING_USER_FAILED',
-    text: 'Falha ao verificar usuário',
+    text: 'No se pudo verificar el usuario',
   },
   {
     label: 'LBL_OVPN_STARTED',
@@ -273,7 +273,7 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_TLS_VERSION',
-    text: '<b>Versão do TLS: %s</b>',
+    text: '<b>Versión TLS: %s</b>',
   },
   {
     label: 'LBL_TLS_ALGORITHM',
@@ -281,23 +281,23 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_INVALID_IP',
-    text: 'IP inválido: %s',
+    text: 'IP invalido: %s',
   },
   {
     label: 'LBL_CHECK_USER_TITLE',
-    text: 'INFO. DO USUÁRIO',
+    text: 'INFO. DE USUARIO',
   },
   {
     label: 'LBL_CHECK_USER_MESSAGE',
-    text: '👤 Nome de usuario: {username}<br>📆 Expira em: {expiration_date}<br>📅 Dias restantes: {expiration_days}<br>🚫 Conexoes: {count_connections}|{limit_connections}',
+    text: '👤 Nombre de usuario: {username}<br>📆 Expira el: {expiration_date}<br>📅 Dias restantes: {expiration_days}<br>🚫 Conexiones: {count_connections}|{limit_connections}',
   },
   {
     label: 'LBL_NETWORK_STATUS',
-    text: 'Status da rede: %s',
+    text: 'Status de red: %s',
   },
   {
     label: 'LBL_WELCOME',
-    text: 'Bem-vindo(a)',
+    text: 'Bienvenido(a)',
   },
   {
     label: 'LBL_INFO',
@@ -309,27 +309,27 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_SSH_LIB_NOT_FOUND',
-    text: 'SSH não encontrado',
+    text: 'SSH no encontrado',
   },
   {
     label: 'LBL_V2RAY_NOT_FOUND',
-    text: 'V2Ray não encontrado',
+    text: 'V2Ray no encontrado',
   },
   {
     label: 'LBL_OPENVPN_NOT_FOUND',
-    text: 'OpenVPN não encontrado',
+    text: 'OpenVPN no encontrado',
   },
   {
     label: 'LBL_APP_UPDATE_TITLE',
-    text: 'ATUALIZAÇÃO DISPONÍVEL',
+    text: 'ACTUALIZACIÓN DISPONIBLE',
   },
   {
     label: 'LBL_APP_UPDATE_MESSAGE',
-    text: 'UMA NOVA VERSÃO DO APLICATIVO ESTÁ DISPONÍVEL, CLIQUE NO BOTÃO ABAIXO PARA ATUALIZAR.',
+    text: 'HAY DISPONIBLE UNA NUEVA VERSIÓN DE LA APLICACIÓN, HAGA CLIC EN EL BOTÓN A CONTINUACIÓN PARA ACTUALIZAR.',
   },
   {
     label: 'LBL_APP_UPDATE_BUTTON',
-    text: 'ATUALIZAR',
+    text: 'ACTUALIZAR',
   },
   {
     label: 'LBL_APP_UPDATE_INSTALL',
@@ -337,55 +337,55 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_APP_UPDATE_DOWNLOADING',
-    text: 'BAIXANDO ATUALIZAÇÃO',
+    text: 'DESCARGANDO ACTUALIZACIÓN',
   },
   {
     label: 'LBL_APP_UPDATE_DOWNLOAD_COMPLETED',
-    text: 'DOWNLOAD COMPLETO',
+    text: 'DOWNLOAD COMPLETA',
   },
   {
     label: 'LBL_CONFIG_NOT_SELECTED',
-    text: 'Nenhuma configuração selecionada',
+    text: 'Ninguna configuración seleccionada',
   },
   {
     label: 'LBL_CONFIG_NOT_ACTIVE',
-    text: 'Parece que a configuração selecionada não está ativa',
+    text: 'Parece que la configuración seleccionada no está activa',
   },
   {
     label: 'LBL_CLEAR_APP_TITLE',
-    text: 'LIMPAR APLICATIVO',
+    text: 'LIMPIAR APLICACION',
   },
   {
     label: 'LBL_CLEAR_APP_MESSAGE',
-    text: 'VOCÊ TEM CERTEZA QUE QUER LIMPAR O APLICATIVO?',
+    text: '¿ESTÁS SEGURO DE QUE QUIERES LIMPIAR LA APLICACIÓN?',
   },
   {
     label: 'LBL_VPN_PERMISSION_DENIED',
-    text: 'ERRO AO ESTABELECER CONEXÃO VPN',
+    text: 'ERROR AL ESTABLECER CONEXIÓN VPN',
   },
   {
     label: 'LBL_VPN_PERMISSION_DENIED_TEXT',
-    text: 'Desculpe, não foi possível estabelecer a conexão VPN. Isso pode ter ocorrido porque você optou por não adicionar um perfil de VPN, negou o acesso ao serviço VPN ou tem um aplicativo que está usando o VPN sempre ativo. Verifique suas configurações de VPN e verifique se não há outros aplicativos que estejam usando o VPN para garantir que a conexão VPN possa ser estabelecida corretamente.',
+    text: 'Lo sentimos, no se pudo establecer la conexión VPN. Esto podría deberse a que eligió no agregar un perfil de VPN, le negó el acceso al servicio VPN o tiene una aplicación que utiliza VPN siempre activa. Verifique la configuración de su VPN y asegúrese de que no haya otras aplicaciones que estén usando la VPN para garantizar que la conexión VPN se pueda establecer correctamente.',
   },
   {
     label: 'LBL_VPN_PERMISSION_DENIED_BTN',
-    text: 'ABRIR CONFIGURAÇÕES DE VPN',
+    text: 'ABRIR CONFIGURACIÓN DE VPN',
   },
   {
     label: 'LBL_YES',
-    text: 'Sim',
+    text: 'Si',
   },
   {
     label: 'LBL_NO',
-    text: 'Não',
+    text: 'No',
   },
   {
     label: 'LBL_CONFIG_IMPORT_TITLE',
-    text: 'IMPORTAR CONFIGURAÇÃO',
+    text: 'IMPORTAR CONFIGURACIÓN',
   },
   {
     label: 'LBL_CONFIG_IMPORT_MESSAGE',
-    text: 'FOI ENCONTRADO UMA CONFIGURAÇÃO NA AREA DE TRANSFERÊNCIA. DESEJA IMPORTAR?',
+    text: 'SE ENCONTRÓ UNA CONFIGURACIÓN EN EL PORTAPAPELES. ¿QUIERES IMPORTAR?',
   },
   {
     label: 'LBL_CONFIG_IMPORT_BTN_IMPORT',
@@ -393,23 +393,23 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_LIMITER_TITLE',
-    text: 'LIMITER',
+    text: 'LÍMITE',
   },
   {
     label: 'LBL_LIMITER_TEXT',
-    text: 'Desculpe, mas atualmente o número máximo de conexões permitidas foi atingido. Por favor, tente novamente mais tarde ou entre em contato com o suporte para obter mais informações. Obrigado',
+    text: 'Lo sentimos, pero actualmente se ha alcanzado el número máximo de conexiones permitidas. Inténtelo de nuevo más tarde o comuníquese con el soporte para obtener más información. Gracias',
   },
   {
     label: 'LBL_VALIDATING_ACCESS',
-    text: 'Validando seu acesso...',
+    text: 'Validando su acceso...',
   },
   {
     label: 'LBL_DNS_FORWARDING_DISABLED',
-    text: '<b>Encaminhamento de DNS desabilitado</b>',
+    text: '<b>Reenvío de DNS deshabilitado</b>',
   },
   {
     label: 'LBL_DNS_FORWARDING_ENABLED',
-    text: '<b>Encaminhamento de DNS habilitado</b>',
+    text: '<b>Reenvío DNS habilitado</b>',
   },
   {
     label: 'LBL_QUANTITY_PAYLOAD',
@@ -421,7 +421,7 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_QUANTITY_PROXY',
-    text: '<b>PROXIES: %s</b>',
+    text: '<b>PROXYS: %s</b>',
   },
   {
     label: 'LBL_QUANTITY_SERVER',
@@ -429,7 +429,7 @@ const AppTextDefault = [
   },
   {
     label: 'LBL_QUANTITY_PROCESS',
-    text: '<b>PROCESSOS: %s</b>',
+    text: '<b>PROCESO: %s</b>',
   },
 ];
 
