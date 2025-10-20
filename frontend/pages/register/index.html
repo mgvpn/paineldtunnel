@@ -24,6 +24,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    main {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
     }
 
     .text-bg-dark {
@@ -31,19 +39,20 @@
       backdrop-filter: blur(10px);
       color: var(--dark-color) !important;
       transition: transform 0.3s ease;
-    }
-
-    .text-bg-dark:hover {
-      transform: translateY(-5px);
+      min-height: 100vh;
+      border-radius: 0 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .register-header {
-      padding: 1.5rem 0;
+      padding: 2.5rem 1rem;
       text-align: center;
       background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
       color: white;
-      margin: -0.75rem -0.75rem 1.5rem -0.75rem;
-      border-radius: 15px 15px 0 0;
+      margin: 0;
+      border-radius: 0;
     }
 
     .img-rounded {
@@ -169,8 +178,27 @@
     }
 
     @media (max-width: 768px) {
-      body {
-        padding: 1rem;
+      .card {
+        max-width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+      }
+      
+      .register-header {
+        padding: 2rem 1rem;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .text-bg-dark {
+        min-height: auto;
+        border-radius: 15px !important;
+        max-width: 450px;
+        margin: 1rem auto;
+      }
+      
+      .register-header {
+        border-radius: 15px 15px 0 0;
       }
     }
   </style>
@@ -179,9 +207,9 @@
   <link href="../static/css/bootstrap.css" rel="stylesheet">
 </head>
 
-<body class="w-100 vh-100 d-flex justify-content-center">
-  <main class="text-center">
-    <div class="card text-bg-dark shadow border border-0 rounded-4 p-3" style="max-width: 400px;">
+<body class="w-100 vh-100">
+  <main class="text-center h-100 d-flex align-items-center justify-content-center">
+    <div class="card text-bg-dark shadow border border-0 p-3 w-100" style="max-width: 450px;">
       
       <div class="register-header">
         <img class="mb-3 img-rounded" src="../static/img/icon.jpg" alt="" width="90" height="90">
