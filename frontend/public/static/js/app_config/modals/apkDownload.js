@@ -8,6 +8,7 @@ class ApkDownloadModal {
             </div>
             <div class="modal-body p-2">
                 <div class="d-flex flex-column gap-2 justify-content-center">
+                    
                     <div class="card">
                         <div class="card-body p-2">
                             <h5 class="card-title d-flex justify-content-center">TUTORIAL</h5>
@@ -15,13 +16,24 @@ class ApkDownloadModal {
                             <a href="https://youtu.be/BXspkdAhp4g" class="btn btn-dark w-100 mt-2">Alterar las credenciales</a>
                         </div>
                     </div>
+
                     <div class="card">
                         <div class="card-body p-2">
                             <h5 class="card-title d-flex justify-content-center">SUPER-VPN</h5>
                             <p class="card-text">Esta versión contiene modos de MULTI CONEXIONES SSH, SSL, OpenVPN y V2RAY (ANDROID 14 ✅)</p>
-                            <a href="https://github.com/carlos-ayala/SUPER-VPN/raw/main/SUPER-VPN.apk" class="btn btn-dark w-100 mt-2">DESCARGAR</a>
+                            <a href="https://github.com/carlos-ayala/SUPER-VPN/raw/main/SUPER-VPN.apk" class="btn btn-dark w-100 mt-2">DESCARGAR SUPER-VPN</a>
                         </div>
                     </div>
+
+                    <div class="card">
+                        <div class="card-body p-2">
+                            <h5 class="card-title d-flex justify-content-center">VPS-SUPER (Versión nueva)</h5>
+                            <p class="card-text">Esta es la versión más reciente con mejoras y actualizaciones adicionales.</p>
+                            <a href="https://github.com/carlos-ayala/SUPER-VPN/raw/main/VPS-SUPER%20(5).apk.bak" class="btn btn-dark w-100 mt-2" download>DESCARGAR VPS-SUPER</a>
+                            <small class="text-muted">Después de descargar, renombrar de .apk.bak a .apk para instalar en Android.</small>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
