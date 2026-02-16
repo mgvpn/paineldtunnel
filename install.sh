@@ -56,10 +56,10 @@ sudo apt-get install cron -y
 sudo apt-get install unzip -y
 sudo apt-get install screen -y
 sudo apt-get install git -y
-curl -s -L https://raw.githubusercontent.com/http-custom/paineldtunnel/main/setup_20.x | bash
+curl -s -L https://raw.githubusercontent.com/bboyapi/paineldtunnel/main/setup_20.x | bash
 sudo apt-get install nodejs -y
 #=========================
-git clone https://github.com/http-custom/paineldtunnel.git
+git clone https://github.com/bboyapi/paineldtunnel.git
 cd /root/paineldtunnel 
 chmod 777 pon poff menudt backmod
 mv pon poff menudt backmod /bin
