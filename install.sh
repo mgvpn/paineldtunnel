@@ -59,7 +59,7 @@ sudo apt-get install git -y
 curl -s -L https://raw.githubusercontent.com/mgvpn/paineldtunnel/main/setup_20.x | bash
 sudo apt-get install nodejs -y
 #=========================
-git clone https://github.com/mgvpn/paineldtunnel.git
+git clone https://github.com/mgvp/paineldtunnel.git
 cd /root/paineldtunnel 
 chmod 777 pon poff menudt backmod
 mv pon poff menudt backmod /bin
