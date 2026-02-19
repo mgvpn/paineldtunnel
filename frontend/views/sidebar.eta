@@ -2,7 +2,7 @@
   <div class="sidebar-header">
     <a href="/" target="_self">
       <img src="../static/img/icon.jpg" width="40" height="40">
-      <span class="fs-4">Super WEB</span>
+      <span class="fs-4">MG VPN WEB</span>
     </a>
     <button id="closeNav">
       <i class="bi bi-list-nested"></i>
